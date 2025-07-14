@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preload" as="image" href="https://ssl.cdn-redfin.com/photo/211/bigphoto/403/RLS20033403_1.jpg">
+  <link rel="preconnect" href="https://ssl.cdn-redfin.com">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image Layout</title>
+  <style>
+    body {
+      margin: 10px;
+      font-family: sans-serif;
+    }
+    .container {
+      display: flex;
+      gap: 10px;
+    }
+    .main-image {
+      width: 746px;
+      height: 475px;
+      background-color: #ccc;
+      flex-shrink: 0;
+    }
+    .secondary-images {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .row {
+      display: flex;
+      gap: 10px;
+    }
+    .secondary-image {
+      width: 373px;
+      height: 233px;
+      background-color: #eee;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img class="main-image" src="https://ssl.cdn-redfin.com/photo/211/bigphoto/403/RLS20033403_1.jpg" fetchpriority="high" alt="Main" />
+    <div class="secondary-images">
+      <div class="row">
+        <img class="secondary-image" src="https://ssl.cdn-redfin.com/photo/211/mbphotov3/403/genMid.RLS20033403_5_0.jpg" fetchpriority="auto" alt="Secondary 1" />
+        <img class="secondary-image" src="https://ssl.cdn-redfin.com/photo/211/mbphotov3/403/genMid.RLS20033403_8_0.jpg" fetchpriority="auto" alt="Secondary 2" />
+        <img class="secondary-image" src="https://ssl.cdn-redfin.com/photo/211/mbphotov3/403/genMid.RLS20033403_3_0.jpg" fetchpriority="auto" alt="Secondary 3" />
+      </div>
+      <div class="row">
+        <img class="secondary-image" src="https://ssl.cdn-redfin.com/photo/211/mbphotov3/403/genMid.RLS20033403_15_0.jpg" fetchpriority="auto" alt="Secondary 4" />
+        <img class="secondary-image" src="https://ssl.cdn-redfin.com/photo/211/mbphotov3/403/genMid.RLS20033403_12_0.jpg" fetchpriority="auto" alt="Secondary 5" />
+        <img class="secondary-image" src="https://ssl.cdn-redfin.com/photo/211/mbphotov3/403/genMid.RLS20033403_10_0.jpg" fetchpriority="auto" alt="Secondary 6" />
+      </div>
+    </div>
+  </div>
+</body>
+</html>
